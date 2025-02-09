@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="styles.css"></link>
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Dynamic Grid with Slider</title>
 </head>
 <body>
-    <button id="reset-button">Change Grid Size</button>
-    <div id="grid-container">
-
+    <div class="controls">
+        <label for="grid-size-slider">Grid Size: <span id="grid-size-value">16</span></label>
+        <input type="range" id="grid-size-slider" min="1" max="100" value="16">
     </div>
+    <div id="grid-container"></div>
+    <script defer src="script.js"></script>
 </body>
 </html>
