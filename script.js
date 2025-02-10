@@ -2,6 +2,10 @@ const gridContainer = document.querySelector('#grid-container');
 const gridSizeSlider = document.querySelector('#grid-size-slider');
 const gridSizeValue = document.querySelector('#grid-size-value');
 
+function getRandomColor() {
+    return `hsl(${Math.floor(Math.random() * 360)}, 100%, 70%)`; // Generates a bright random color
+}
+
 function createGrid(squaresPerSide) {
     gridContainer.innerHTML = ''; // Clear existing grid
 
@@ -14,9 +18,9 @@ function createGrid(squaresPerSide) {
         gridItem.style.width = `${itemSize}px`;
         gridItem.style.height = `${itemSize}px`;
 
-        // Hover effect
+        // Hover effect with random colors
         gridItem.addEventListener('mouseover', () => {
-            gridItem.style.backgroundColor = 'black';
+            gridItem.style.backgroundColor = getRandomColor();
         });
 
         gridContainer.appendChild(gridItem);
